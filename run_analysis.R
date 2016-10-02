@@ -1,12 +1,12 @@
-setwd("C:\\Users\\Scott\\Documents\\Coursera\\Getting_and_Cleaning_Data")
+setwd("C:\\Users\\Scott\\Documents\\Coursera\\Getting_and_Cleaning_Data\\Week4")
 library(dplyr)
 library(reshape2)
 
 address <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-root <- "./Week4/Samsung_activity_data/UCI HAR Dataset/"
+root <- "./Samsung_activity_data/UCI HAR Dataset/"
 if (!file.exists(address)){
-    download.file(address, "./Week4/Samsung_activity_data.zip", method = "curl")
-    unzip("./Week4/Samsung_activity_data.zip", exdir = "./Week4/Samsung_activity_data")
+    download.file(address, "./Samsung_activity_data.zip", method = "curl")
+    unzip("./Samsung_activity_data.zip", exdir = "./Samsung_activity_data")
 }
 train_x <- read.table(paste(root, "train/X_train.txt", sep=""))
 train_y <- read.table(paste(root, "train/y_train.txt", sep=""))
